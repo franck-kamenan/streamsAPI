@@ -10,6 +10,7 @@ public class StreamDemo {
             System.out.println(s);
         }
 
-        Stream.of(strArray).forEach(element -> System.out.println(element));
+        Stream<String> stream = Stream.of(strArray);
+        stream.forEach(e -> System.out.println(e));
     }
 }
