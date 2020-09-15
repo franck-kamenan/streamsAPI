@@ -12,5 +12,7 @@ public class StreamDemo {
 
         Stream<String> stream = Stream.of(strArray);
         stream.forEach(e -> System.out.println(e));
+
+        Stream.generate(() -> "hello world").limit(10).forEach(e -> System.out.println(e));
     }
 }
