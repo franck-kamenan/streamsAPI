@@ -1,5 +1,6 @@
 package be.intecbrussel.streams;
 
+import java.util.Random;
 import java.util.stream.Stream;
 
 public class StreamDemo {
@@ -13,6 +14,6 @@ public class StreamDemo {
         Stream<String> stream = Stream.of(strArray);
         stream.forEach(e -> System.out.println(e));
 
-        Stream.generate(() -> "hello world").limit(10).forEach(e -> System.out.println(e));
+        Stream.generate(() -> new Random().nextInt(10)).limit(10).forEach(e -> System.out.println(e));
     }
 }
