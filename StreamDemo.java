@@ -10,20 +10,11 @@ public class StreamDemo {
     public static void main(String[] args) {
         String[] strArray = "This is an array of string that is getting long".split(" ");
 
-        for (String s: strArray) {
-            System.out.println(s);
-        }
+        int sum = IntStream.range(0, 10).sum();
+        int sumClosed = IntStream.rangeClosed(0, 10).sum();
+        System.out.println("\n" + sum);
+        System.out.println("\n" + sumClosed);
 
-        Stream<String> stream = Stream.of(strArray);
-        stream.forEach(e -> System.out.println(e));
 
-        Stream.generate(() -> new Random().nextInt(10)).limit(10).forEach(e -> System.out.println(e));
-
-        Stream<String> stringStream;
-        IntStream intStream;
-        LongStream longStream;
-        DoubleStream doubleStream;
-
-        IntStream.iterate(0, e -> e + 1).limit(10).forEach(e -> System.out.println(e));
     }
 }
