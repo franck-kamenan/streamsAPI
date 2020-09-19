@@ -18,5 +18,10 @@ public class PersonApp {
                               .average().getAsDouble();
 
         System.out.println(gemiddeledeLeeftijd);
+
+        Stream.of(personArray).forEach(e -> {
+            String s = "Person name: " + e.getVoornaam() + " is " + e.getLeeftijd() + " jaar oud.";
+            System.out.println(s);
+        });
     }
 }
