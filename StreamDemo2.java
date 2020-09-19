@@ -6,10 +6,11 @@ public class StreamDemo2 {
 
     public static void main(String[] args) {
 
-        IntStream.rangeClosed(1, 20)
+        IntStream.rangeClosed(1, 50)
                  .filter(e -> e % 2 == 0)
                  .filter(e -> e % 3 == 0)
-                 .filter(e -> e > 10)
+                 .filter(e -> e > 20)
+                 .limit(2)
                  .forEach(e -> System.out.println(e));
     }
 }
