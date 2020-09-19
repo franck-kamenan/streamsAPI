@@ -9,6 +9,7 @@ public class StreamDemo2 {
         IntStream.rangeClosed(1, 20)
                  .filter(e -> e % 2 == 0)
                  .filter(e -> e % 3 == 0)
+                 .filter(e -> e > 10)
                  .forEach(e -> System.out.println(e));
     }
 }
