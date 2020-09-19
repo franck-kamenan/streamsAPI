@@ -6,8 +6,9 @@ public class StreamDemo2 {
 
     public static void main(String[] args) {
 
-        IntStream.rangeClosed(0, 10)
+        IntStream.rangeClosed(1, 20)
                  .filter(e -> e % 2 == 0)
+                 .filter(e -> e % 3 == 0)
                  .forEach(e -> System.out.println(e));
     }
 }
