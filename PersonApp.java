@@ -14,7 +14,7 @@ public class PersonApp {
 
         Person[] personArray = new Person[]{p1, p2, p3};
 
-        Stream.of(personArray).map(e -> e.getVoornaam())
+        Stream.of(personArray).map(e -> e.getVoornaam() + " " + e.getAchternaam() + " " + e.getLeeftijd())
                               .forEach(e -> System.out.println(e));
     }
 }
