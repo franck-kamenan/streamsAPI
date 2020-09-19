@@ -22,5 +22,6 @@ public class StreamDemo {
         for (int i: intArray) {
             System.out.println(i);
         }
+        IntStream.of(intArray).forEach(e -> System.out.println(e));
     }
 }
