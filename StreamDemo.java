@@ -11,31 +11,31 @@ public class StreamDemo {
     public static void main(String[] args) {
         String[] strArray = "This is an array of string that is getting long".split(" ");
 
-        OptionalInt min = IntStream.range(0, 10).min();
-        if(min.isPresent()){
-            System.out.println(min.getAsInt());
+        OptionalInt max = IntStream.range(0, 10).max();
+        if(max.isPresent()){
+            System.out.println(max.getAsInt());
             System.out.println("Is present.");
         } else {
             System.out.println("Is NOT present.");
         }
         System.out.println("\n");
-        if(min.isEmpty()){
-            System.out.println(min.getAsInt());
+        if(max.isEmpty()){
+            System.out.println(max.getAsInt());
             System.out.println("Is empty.");
         } else {
             System.out.println("Is NOT empty.");
         }
         System.out.println("\n");
 
-        OptionalInt OtherMin = IntStream.of().min();
-        if(OtherMin.isPresent()){
-            System.out.println(OtherMin.getAsInt());
+        OptionalInt OtherMax = IntStream.of().max();
+        if(OtherMax.isPresent()){
+            System.out.println(OtherMax.getAsInt());
             System.out.println("Is present.");
         } else {
             System.out.println("Is NOT present.");
         }
         System.out.println("\n");
-        if(OtherMin.isEmpty()){
+        if(OtherMax.isEmpty()){
             // System.out.println(OtherMin.getAsInt()); //error
             System.out.println("Is empty.");
         } else {
