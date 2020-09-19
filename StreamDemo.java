@@ -10,36 +10,8 @@ import java.util.stream.Stream;
 
 public class StreamDemo {
     public static void main(String[] args) {
-        OptionalDouble OtherMax = IntStream.of().average();
-        if(OtherMax.isPresent()){
-            System.out.println(OtherMax.getAsDouble());
-            System.out.println("Is present.");
-        } else {
-            System.out.println("Is NOT present.");
-        }
-        System.out.println("\n");
-        if(OtherMax.isEmpty()){
-            // System.out.println(OtherMin.getAsInt()); //error
-            System.out.println("Is empty.");
-        } else {
-            System.out.println("Is NOT empty.");
-        }
-        System.out.println("\n");
 
-        OptionalDouble rangeClosedObject = IntStream.rangeClosed(0, 10).average();
-        if(rangeClosedObject.isPresent()){
-            System.out.println(rangeClosedObject.getAsDouble());
-            System.out.println("Is present.");
-        } else {
-            System.out.println("Is NOT present.");
-        }
-        System.out.println("\n");
-        if(rangeClosedObject.isEmpty()){
-            // System.out.println(rangeClosedObject.getAsInt()); //error
-            System.out.println("Is empty.");
-        } else {
-            System.out.println("Is NOT empty.");
-        }
-        System.out.println("\n");
+        int rangeClosedObject = IntStream.rangeClosed(1, 4).reduce(1, (accumulatie, e) -> accumulatie * e);
+        System.out.println(rangeClosedObject);
     }
 }
