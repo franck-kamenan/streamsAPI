@@ -13,5 +13,9 @@ public class StreamDemo {
 
         int rangeClosedObject = IntStream.rangeClosed(1, 4).reduce(1, (accumulatie, e) -> accumulatie * e);
         System.out.println(rangeClosedObject);
+
+        String[] strArray = "This is an array of string that is getting long".split(" ");
+        String sentence = Stream.of(strArray).reduce("",(acc, e) -> acc + e + " ");
+        System.out.println(sentence);
     }
 }
