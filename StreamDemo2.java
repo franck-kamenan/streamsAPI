@@ -1,5 +1,6 @@
 package be.intecbrussel.streams;
 
+import java.util.Random;
 import java.util.stream.IntStream;
 
 public class StreamDemo2 {
@@ -14,6 +15,12 @@ public class StreamDemo2 {
                  .map(e -> e * 5)
                  .mapToDouble(e -> e / 1.5)  //DoubleStream
                  .mapToInt(e -> (int) e / 5) //Intstream
+                 .forEach(e -> System.out.println(e));
+
+        System.out.println("\n");
+
+        IntStream.generate(() -> new Random().nextInt(100))
+                 .limit(20)
                  .forEach(e -> System.out.println(e));
     }
 }
