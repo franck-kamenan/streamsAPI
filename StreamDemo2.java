@@ -21,6 +21,7 @@ public class StreamDemo2 {
 
         IntStream.generate(() -> new Random().nextInt(100))
                  .limit(20)
+                 .sorted()
                  .forEach(e -> System.out.println(e));
     }
 }
