@@ -17,5 +17,10 @@ public class StreamDemo {
         String[] strArray = "This is an array of string that is getting long".split(" ");
         String sentence = Stream.of(strArray).reduce("",(acc, e) -> acc + e + " ");
         System.out.println(sentence);
+
+        int[] intArray = IntStream.rangeClosed(0, 10).toArray();
+        for (int i: intArray) {
+            System.out.println(i);
+        }
     }
 }
