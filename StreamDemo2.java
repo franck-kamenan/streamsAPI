@@ -12,7 +12,8 @@ public class StreamDemo2 {
                  .filter(e -> e > 20)
                  .limit(2)
                  .map(e -> e * 5)
-                 .mapToDouble(e -> e / 1.5)
+                 .mapToDouble(e -> e / 1.5)  //DoubleStream
+                 .mapToInt(e -> (int) e / 5) //Intstream
                  .forEach(e -> System.out.println(e));
     }
 }
